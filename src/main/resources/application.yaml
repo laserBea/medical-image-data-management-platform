@@ -1,0 +1,10 @@
+service:
+  name: medical-image-data-management-platform
+  version: 0.0.1
+
+server:
+  port: 8080
+
+mybatis:
+  typeAliasesPackage: com.cloume.rest.app.medicalimagedatamanagementplatform.mybatis.entity
+  mapperLocations: classpath:mapper/*.xml
