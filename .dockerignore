@@ -1,0 +1,10 @@
+target/
+!.gitkeep
+*.log
+.DS_Store
+.idea/
+*.iml
+.git/
+.gitignore
+**/*.md
+dev-ops/

@@ -1,0 +1,24 @@
+service:
+  name: ${SERVICE_NAME:medical-image-data-management-platform}
+  version: ${SERVICE_VERSION:0.0.1}
+
+server:
+  port: ${SERVER_PORT:8080}
+
+# Spring 数据源配置
+# 所有数据库连接信息都来自环境变量，由 docker-compose.yml 注入
+spring:
+  datasource:
+    url: ${SPRING_DATASOURCE_URL}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
+    driver-class-name: ${SPRING_DATASOURCE_DRIVER_CLASS_NAME:com.mysql.cj.jdbc.Driver}
+
+mybatis:
+  typeAliasesPackage: ...
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
